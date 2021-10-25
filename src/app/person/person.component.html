@@ -1,0 +1,26 @@
+<h1 style="text-align: center">Список проверенных</h1>
+<table style="margin: auto; border-collapse: collapse; text-align: center" border="1">
+  <tr>
+    <th>Организация</th>
+    <th>ФИО</th>
+    <th>Дата рождения</th>
+    <th>Паспорт</th>
+    <th>Место рождения</th>
+    <th>Допуск</th>
+    <th>Дата проверки</th>
+    <th>Подписной номер</th>
+    <th>Дата подписи</th>
+  </tr>
+  <tr *ngFor="let person of people; let i = index">
+    <td>{{person.company_name}}</td>
+    <td>{{person.people_name}}</td>
+    <td>{{person.people_birthday}}</td>
+    <td>{{person.people_passport}}</td>
+    <td>{{person.people_birth}}</td>
+    <td *ngIf="person.access === '+'" style="background-color: green">{{person.access}}</td>
+    <td *ngIf="person.access != '+'" style="background-color: red">{{person.access}}</td>
+    <td>{{person.check_datetime}}</td>
+    <td>{{person.subscription_number}}</td>
+    <td>{{person.subscription_date}}</td>
+  </tr>
+</table>
