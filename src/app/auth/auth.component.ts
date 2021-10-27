@@ -20,7 +20,7 @@ export class AuthComponent implements OnInit {
     private router: Router,
     private fb: FormBuilder) {
     if (this.tokenStorage.getUser()) {
-      this.router.navigate(['main']);
+      this.router.navigate(['/profile']);
     }
   }
 
